@@ -1,0 +1,92 @@
+.pageOne {
+    font-size: 1.6rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 2rem;
+    text-align: right;
+    background-size: cover;
+    color: rgb(6, 34, 34);
+}
+
+.header {
+    /* font-weight: 400; */
+    letter-spacing: 1px;
+    position: relative;
+    margin-bottom: 4rem;
+    opacity: 0.7;
+    text-align: center;
+
+}
+
+.header::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.178);
+    width: 45rem;
+    position: absolute;
+    color: teal;
+    right: 7rem;
+    margin-top: 1rem;
+}
+
+.name {
+    /* font-weight: 400; */
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.884);
+    display: block;
+    width: 45rem;
+    margin: 1rem auto;
+    text-align: center;
+    background: var(--primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+}
+
+.definition {
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+    letter-spacing: 0.5px;
+    margin-top: 5rem;
+    border: 1px solid #5858584b;
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 3rem;
+    color: rgb(6, 34, 34);
+    opacity: 0.9;
+    /* background: rgb(245, 239, 233); */
+    background: var(--white);
+
+
+
+}
+
+.definitionHeader {
+    position: absolute;
+    top: -35px;
+    right: 15px;
+    /* background: rgb(245, 239, 233); */
+    background: var(--white);
+
+    font-weight: 700;
+    padding: 10px;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.767);
+}
+
+.headquarter {
+    opacity: 0.8;
+}
+
+.headquarter span {
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 414px) {
+    .definition {
+        margin-top: 7rem;
+        line-height: 4rem;
+    }
+}

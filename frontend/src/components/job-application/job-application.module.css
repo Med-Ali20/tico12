@@ -1,0 +1,49 @@
+.page {
+    max-width: 92rem;
+    color: aliceblue;
+    height: 60rem;
+    margin: 8rem auto;
+    display: flex;
+    border-radius: 5px;
+    padding: 0;
+
+}
+
+
+.section {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    filter: brightness(80%);
+    transition: all 0.5s;
+    cursor: pointer;
+    background: var(--primary);
+
+}
+
+
+.section:hover {
+    filter: brightness(110%);
+    transform: scale(103%);
+    z-index: 5;
+}
+
+.businessman {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.applicant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon {
+    width: 10rem;
+}

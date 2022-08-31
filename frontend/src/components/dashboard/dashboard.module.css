@@ -1,0 +1,109 @@
+.dashboardPage {
+    max-width: 92rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 4rem;
+}
+
+
+.loader {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background: rgba(0, 0, 0, 0.185);
+}
+
+.registerLink {
+    font-size: 1.6rem;
+    background: var(--secondary);
+    color: #e2e2e2;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 0.8rem 3rem;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    transition: all 0.2s;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    border: none;
+    font-family: 'Cairo';
+}
+
+.addTopic {
+    font-size: 2rem;
+    background: var(--secondary);
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 1.2rem 6rem;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+    display: block;
+    width: 30rem;
+    text-align: center;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+
+.addTopic:hover {
+    filter: brightness(110%);
+}
+
+.logout {
+    background: rgb(214, 69, 69);
+    margin-bottom: 4rem;
+    font-family: "Cairo";
+    border: none;
+}
+
+.applicantsData {
+    text-align: right;
+    background: #e2e2e2;
+    border: 1px solid rgba(0, 0, 0, 0.185);
+    border-radius: 3px;
+    width: 100%;
+    padding: 4rem 4rem;
+    margin-bottom: 2rem;
+}
+
+.sectionName {
+    font-size: 2.4rem;
+    margin-top: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+    padding-bottom: 2rem;
+}
+
+.applicantsDataText {
+    font-size: 1.8rem;
+    background: var(--primary-light);
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.185);
+    margin-bottom: 1rem;
+
+}
+
+.applicantName {
+    display: flex;
+    flex-direction: row-reverse;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.26);
+    padding-bottom: 4px;
+}
+
+.applicantName span {
+    margin-right: 2rem;
+    padding: 0;
+    text-align: left;
+}
+
+@media only screen and (max-width: 414px) {
+    .dashboardPage {
+        padding: 4rem 1rem;
+    }
+}

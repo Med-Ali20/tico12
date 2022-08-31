@@ -1,0 +1,67 @@
+.cuPage {
+    width: 100%;
+    min-height: 67.8vh;
+    display: grid;
+    place-content: center;
+    margin: 4rem auto 0 auto;
+    padding: 0;
+    /* background: #E5E5E5;     */
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    max-width: 92rem;
+    margin: 1rem auto 2rem auto;
+    grid-gap: 4rem;
+    background: var(--primary-light);
+    padding: 7rem 7rem;
+
+}
+
+.register {
+    width: 92rem;
+    background: var(--primary-light);
+    margin: 1rem 0;
+    color: rgb(6, 54, 117);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0 2rem 0;
+}
+
+.registerText {
+    font-size: 2.8rem;
+    line-height: 1rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.registerLink {
+    font-size: 2rem;
+    background: var(--secondary);
+    color: #e2e2e2;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 1.2rem 6rem;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.registerLink:hover {
+    filter: brightness(110%);
+}
+
+@media only screen and (max-width: 414px) {
+    
+    .cuPage {
+        padding: 0 1rem;
+    }
+
+    .cardsContainer {
+        grid-template-columns: repeat(auto-fit, minmax(69rem, 1fr));
+    }
+}

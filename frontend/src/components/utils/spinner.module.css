@@ -1,0 +1,15 @@
+.spinner {
+    animation: spin 1s infinite linear  ;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,139 @@
+.topicPage {
+    max-width: 92rem;
+    margin: 6rem auto 2rem auto;
+    padding-top: 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: #9ae4d71e;
+}
+
+.topicHeader {
+    background: var(--backgroundC);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    margin: 1rem 0;
+    padding: 0 2rem;
+    width: 100%;
+    border-radius: 3px;
+    color: #000;
+
+}
+
+.topicHeaderText {
+    font-size: 2.7rem;
+    margin-left: auto;
+    letter-spacing: 2px;
+    text-align: right;
+    
+}
+
+.date {
+    font-size: 2rem;
+    font-weight: 300;
+
+}
+
+.gallery {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightArrow,
+.leftArrow {
+    width: 20rem;
+    height: 20rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.534);
+}
+
+.rightArrow {
+    clip-path: polygon(100% 52%, 30% 0, 30% 100%);
+}
+
+.leftArrow {
+    clip-path: polygon(76% 0, 0 51%, 74% 100%);
+}
+
+.topicBody {
+    width: 100%;
+    overflow: hidden;
+    ;
+}
+
+.topicParagraph {
+    font-size: 2rem;
+    text-align: right;
+    background: var(--backgroundC);
+    border-radius: 3px;
+    padding: 1rem 2rem;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.registerLink {
+    font-size: 2rem;
+    background: var(--secondary);
+    color: #e2e2e2;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 1.2rem 6rem;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+    display: block;
+    width: 30rem;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+
+.registerLink:hover {
+    filter: brightness(110%);
+}
+
+.close {
+    font-size: 4rem;
+    color: #fff;
+    position: fixed;
+    top: 10rem;
+    right: 20rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.topicPhotos {
+    width: 92%;
+    margin: 0 auto;
+    background: var(--backgroundC);
+    padding: 2rem 0;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    place-content: center;
+    grid-row-gap: 1rem;
+}
+
+.topicPhoto {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 414px) {
+    .topicPhotos {
+        grid-template-columns: repeat(auto-fit, minmax(69rem, 1fr));
+    }
+}
