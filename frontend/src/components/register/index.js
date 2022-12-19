@@ -6,7 +6,7 @@ import axios from 'axios'
 import JobApplication from './jobApplication'
 import JobOffer from './jobOffer'
 import Default from './default'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const register = () => {
