@@ -105,6 +105,21 @@
     outline: none;
 }
 
+.file {
+    font-size: 1.6rem;
+    font-family: "Cairo";
+    letter-spacing: 1px;
+    background: #0d9db6;
+    color: #fff;
+    outline: none;
+    border: 0;
+    padding: 0.7rem;
+    width: 40%;
+    margin-left: auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .check {
     align-self: flex-end;
     outline: none;

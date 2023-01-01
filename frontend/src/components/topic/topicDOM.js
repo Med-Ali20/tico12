@@ -58,14 +58,14 @@ export default function topicDOM( { topic, date, token } ) {
     
     const photos = topic ? topic.images.map(img => {
         return(
-            <span className={styles.topicPhoto} key={Math.random()*10000} onClick={() => showGallery(topic.images.findIndex((i) => i === img)) }> <img src={`data:image/jpeg;base64,${imgProcessor(img.data)}`} width="400px" height="300px" alt="" /> </span>
+            <span className={styles.topicPhoto} key={Math.random()*10000} onClick={() => showGallery(topic.images.findIndex((i) => i === img)) }> <img src={img} width="400px" height="300px" alt="" /> </span>
         )
     }): (<></>)
 
     const galleryDOM = ( topic.images.length > 0 ?
         <div className={styles.gallery} style={galleryState} > 
         <span className={styles.leftArrow} onClick={() => changeGalleryImage('left', topic.images)} ></span> 
-        <img src={`data:image/jpeg;base64,${imgProcessor(topic.images[imageIndex].data)}`} width="800px" height="600px" alt="" /> 
+        <img src={topic.images[imageIndex]} width="800px" height="600px" alt="" /> 
         <span className={styles.rightArrow}onClick={() => changeGalleryImage('right', topic.images)} ></span>
         <span className={styles.close} onClick={() => setGalleryState({display: 'none'})} >X</span>    
 
@@ -82,7 +82,7 @@ export default function topicDOM( { topic, date, token } ) {
                 <h1 className={styles.topicHeaderText} >{topic.title}</h1>
                     <p className={styles.date} > { `${date.getDate()} / ${date.getMonth() +1} / ${date.getFullYear()} - ${date.getHours()}:${date.getMinutes()}` } </p>
                 </div>
-                <div className={styles.thumbnail} > <img src={`data:image/jpeg;base64,${imgProcessor(topic.thumbnail.data)}`} width={dimenstions.width} height={dimenstions.height} alt="" /> </div>
+                <div className={styles.thumbnail} > <img src={topic.thumbnail} width={dimenstions.width} height={dimenstions.height} alt="" /> </div>
                 <div className={styles.topicBody} >
                     <p className={styles.topicParagraph} >
                         {topic.paragraph}

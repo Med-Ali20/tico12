@@ -15,8 +15,6 @@ const services = ({ dispatchTopics, storeTopics }) => {
     const [skip, setSkip] = useState(0)
     const [hasMore, setHasMore] = useState(true)
 
-
-
     useEffect(() => {
         if(storeTopics.length > 0) {
             setTopics(storeTopics)
@@ -48,7 +46,7 @@ const services = ({ dispatchTopics, storeTopics }) => {
 
     const cards = topics.map(topic => { 
         return (<Link to={`/topic/${topic._id}`}  key={topic._id}  >
-                    <Card image={`data:image/jpeg;base64,${imgProcessor(topic.thumbnail.data)}`}  title={topic.title} />
+                    <Card image={topic.thumbnail}  title={topic.title} />
                 </Link>)
      })
 

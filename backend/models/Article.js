@@ -10,11 +10,11 @@ const articleSchema = mongoose.Schema({
         required: true
     },
     images:[
-        Buffer
+        String
     ]
     ,
     thumbnail : {
-        type: Buffer,
+        type: String,
         required: true
     },
     section: {

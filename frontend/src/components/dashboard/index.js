@@ -17,11 +17,11 @@ const dashboard = ({ logout, token }) => {
 
     useEffect(() => {
        let abortController = new AbortController();  
-       getAppicants()
+       getApplicants()
        abortController.abort()
     },[])
 
-    const getAppicants = () => {
+    const getApplicants = () => {
         axios.get(`/Applicant/applicants?limit=10&skip=${skip}`)
         .then(res => {
             const data = res.data
@@ -108,7 +108,7 @@ const dashboard = ({ logout, token }) => {
                 <div className={styles.applicantsData} >
                     <InfiniteScroll
                     dataLength={applicants.length}
-                    next={getAppicants}
+                    next={getApplicants}
                     loader={applicants.length === 0 ? <></> : <div style={{margin: '2rem auto', background: 'var(--primary)',width: '100%', display: 'flex', justifyContent: 'center', padding: '2rem'}} > <Spinner /> </div>}
                     hasMore={hasMore}
                     > 

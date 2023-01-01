@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './addTopic.module.css'
 import { useState } from 'react'
 import axios from 'axios'
+import * as filestack from 'filestack-js'
 import { useNavigate } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Spinner from '../utils/spinner'
@@ -28,7 +29,7 @@ const addTopic = ({ token }) => {
             setError(false)
             const imgs = [...images]
             const fD = new FormData()
-            fD.append('images', thumbnail)
+            fD.append('thumbnail', thumbnail)
             imgs.forEach(image => {
                 fD.append('images', image)
             })
@@ -45,6 +46,7 @@ const addTopic = ({ token }) => {
                 navigate("/", { replace: true })
                 
             }).catch(e => {
+                console.log(e)
                 navigate("/", { replace: true })
 
             }) 
@@ -55,6 +57,22 @@ const addTopic = ({ token }) => {
         }
         
        
+    }
+
+    const uploadImage = (e, setState, maxFiles) => {
+        e.preventDefault()
+        const client = filestack.init('AF9ysaTqQ8o6usQFiMndgz')
+        client.picker({imageMax: [500, 500], maxFiles, onUploadDone: res => {
+            setState(res.filesUploaded[0].url)
+        }}).open()
+    }
+
+    const uploadImages = (e, setState, maxFiles) => {
+        e.preventDefault()
+        const client = filestack.init('AF9ysaTqQ8o6usQFiMndgz')
+        client.picker({imageMax: [500, 500], maxFiles, onUploadDone: res => {
+            setState(res.filesUploaded.map(file => file.url))
+        }}).open()
     }
 
     
@@ -79,11 +97,11 @@ const addTopic = ({ token }) => {
                     <label className={styles.registerLabel} htmlFor="paragraph">الفقرة</label>
                 </div>
                 <div className={styles.formGroup} >
-                    <input type="file" className={styles.file} name="images" onChange={(e) => {setThumbnail(e.target.files[0])}} />
+                    <input type="button" value="اضافة صورة" className={styles.file} name="images" onClick={(e) => {uploadImage(e, setThumbnail, 1)}} />
                     <label className={styles.registerLabel} htmlFor="file">صورة رئيسية</label>
                 </div>
                 <div className={styles.formGroup} >
-                    <input type="file" className={styles.file} name="images" multiple  onChange={(e) => {setImages(e.target.files)}}  />
+                    <input type="button" value="اضافة صور" className={styles.file} name="images" multiple  onClick={(e) => {uploadImages(e, setImages, 6)}}  />
                     <label className={styles.registerLabel} htmlFor="file2">صور اضافية</label>
                 </div>
                 <div className={`${styles.formGroup} ${styles.chechGroup}`} >

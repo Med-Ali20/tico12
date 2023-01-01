@@ -8,18 +8,12 @@ const auth = require('../utils/Auth')
 
 router.post('/AddArticle', upload.array('images'), auth, async (req, res) => {
     try {
-        const thumbnailBuffer = await sharp(req.files[0].buffer).resize({width: 400}).jpeg().toBuffer()
-        const images =  req.files.slice(1, req.files.length)
-        const imagesBuffer = await Promise.all(images.map( async (e) => {
-             const image = await sharp(e.buffer).resize({width: 400}).jpeg().toBuffer();
-             return image
-            }))
         const newArticle = await Article.create({
             title: req.body.title,
             paragraph: req.body.paragraph,
             section: req.body.section,
-            thumbnail: thumbnailBuffer,
-            images: imagesBuffer,
+            thumbnail: req.body.thumbnail,
+            images: req.body.images,
             applyingAllowed: req.body.applyingAllowed
         })
 
