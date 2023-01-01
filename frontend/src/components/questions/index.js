@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import Spinner from '../utils/spinner'
 
-const index = ( { token } ) => {
+const Index = ( { token } ) => {
     
     const [questions, setQuestions] = useState([])
     const [questionInput, setQuestionInput] = useState('')
@@ -142,4 +142,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps)(index)
+export default connect(mapStateToProps)(Index)

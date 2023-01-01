@@ -4,7 +4,7 @@ import { Outlet, useNavigate, useLocation } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 
-const index = ( {state} ) => {
+const Index = ( {state} ) => {
 
   const [animation, setAnimation] = useState('')
   const animations =  {
@@ -65,4 +65,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(index)
+export default connect(mapStateToProps)(Index)

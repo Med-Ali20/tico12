@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 import Spinner from '../utils/spinner'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
-const childUniversity = ({ dispatchTopics,storeTopics }) => {
+const ChildUniversity = ({ dispatchTopics,storeTopics }) => {
     const [topics, setTopics] = useState([])
     const [skip, setSkip] = useState(0)
     const [hasMore, setHasMore] = useState(true)
@@ -91,4 +91,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(childUniversity)
+export default connect(mapStateToProps, mapDispatchToProps)(ChildUniversity)

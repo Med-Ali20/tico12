@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './pageOne.module.css'
 
-export default function pageOne() {
+export default function PageOne() {
   return (
     <div className={styles.pageOne} >
       <h1 className={styles.header} > الحاضنة التكنولوجية للمبتكرين </h1>

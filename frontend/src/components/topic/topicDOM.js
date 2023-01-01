@@ -5,7 +5,7 @@ import imgProcessor from '../utils/imgProcessor'
 import axios from 'axios'
 
 
-export default function topicDOM( { topic, date, token } ) {
+export default function TopicDOM( { topic, date, token } ) {
     
     const [dimenstions, setDimentions] = useState({width: '800px', height: '600px'})
     const [galleryState, setGalleryState] = useState({display: 'none'})

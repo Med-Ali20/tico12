@@ -3,7 +3,7 @@ import styles from './pageTwo.module.css'
 import flag from '../../assets/flag2.svg'
 
 
-export default function pageTwo() {
+export default function PageTwo() {
   return (
     <div className={styles.pageTwo }>
       <h2 className={styles.header}> أهداف الحاضنة <img src={flag} className={styles.flag} alt="" /> </h2>

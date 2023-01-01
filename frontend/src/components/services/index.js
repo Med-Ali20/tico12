@@ -10,7 +10,7 @@ import Spinner from '../utils/spinner'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 
-const services = ({ dispatchTopics, storeTopics }) => {
+const Services = ({ dispatchTopics, storeTopics }) => {
     const [topics, setTopics] = useState([])
     const [skip, setSkip] = useState(0)
     const [hasMore, setHasMore] = useState(true)
@@ -76,4 +76,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(services)
+export default connect(mapStateToProps, mapDispatchToProps)(Services)

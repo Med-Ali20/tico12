@@ -9,7 +9,7 @@ import Spinner from '../utils/spinner'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 
-const dashboard = ({ logout, token }) => {
+const Dashboard = ({ logout, token }) => {
     const [applicants, setApplicants] = useState([])
     const [skip, setSkip] = useState(0)
     const [hasMore, setHasMore] = useState(true)
@@ -135,4 +135,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(dashboard)
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)

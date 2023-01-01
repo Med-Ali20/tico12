@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 
-const wrapper = ({ children, token })=> {
+const Wrapper = ({ children, token })=> {
     const [darkScreenStyle, setDarkScreenStyle] = useState({ display: 'none' })
     const [sideBarStyle, setSideBarStyle] = useState({transform: 'translateX(-100%)', transition: 'all 0.4s'})
 
@@ -64,4 +64,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(wrapper)
+export default connect(mapStateToProps)(Wrapper)

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './register.module.css'
 
-export default function jobApplication({name,setName,phone, setPhone }) {
+export default function JobApplication({name,setName,phone, setPhone }) {
   return (
     <>
         <div className={styles.formGroup} >

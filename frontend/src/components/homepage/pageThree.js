@@ -3,7 +3,7 @@ import styles from './pageThree.module.css'
 import gradHat from '../../assets/gradHat.svg'
 
 
-export default function pageThree() {
+export default function PageThree() {
   return (
     <div className={styles.pageThree} >
       <h2 className={styles.header} >الانشطة الجامعية  <img src={gradHat} className={styles.gradHat} alt="" /> </h2>

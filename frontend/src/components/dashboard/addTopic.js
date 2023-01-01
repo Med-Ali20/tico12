@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import Spinner from '../utils/spinner'
 
 
-const addTopic = ({ token }) => {
+const AddTopic = ({ token }) => {
 
     const [title, setTitle] = useState('')
     const [paragraph, setParagraph] = useState('')
@@ -123,4 +123,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, null)(addTopic)
+export default connect(mapStateToProps, null)(AddTopic)

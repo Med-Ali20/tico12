@@ -9,7 +9,7 @@ import Default from './default'
 import { useNavigate } from 'react-router-dom'
 
 
-const register = () => {
+const Register = () => {
 
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('') 
@@ -114,4 +114,4 @@ const register = () => {
   )
 }
 
-export default register
+export default Register

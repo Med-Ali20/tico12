@@ -3,7 +3,7 @@ import styles from './pageFour.module.css'
 import gear from '../../assets/gear.svg'
 
 
-export default function pageFour() {
+export default function PageFour() {
   return (
     <div className={styles.pageFour} >
       <h2 className={styles.header} >الخدمات المقدمة <img src={gear} className={styles.gear} alt="" /> </h2>

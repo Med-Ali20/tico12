@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-const admin = ({ setToken, token }) => {
+const Admin = ({ setToken, token }) => {
     const [name, setName] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
@@ -63,4 +63,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(admin)
+export default connect(mapStateToProps, mapDispatchToProps)(Admin)

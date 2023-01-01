@@ -6,7 +6,7 @@ import axios from 'axios'
 import Spinner from '../utils/spinner'
 import TopicDOM from './topicDOM'
 
-const topic = ({ token, storeTopic, dispatchTopic }) => {
+const Topic = ({ token, storeTopic, dispatchTopic }) => {
     const [topic, setTopic] = useState('')
     const [date, setDate] = useState({})
     const { id } = useParams()    
@@ -72,4 +72,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(topic)
+export default connect(mapStateToProps, mapDispatchToProps)(Topic)
