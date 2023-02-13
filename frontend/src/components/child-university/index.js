@@ -3,7 +3,6 @@ import Card from '../utils/card'
 import styles from './child-university.module.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import imgProcessor from '../utils/imgProcessor'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import Spinner from '../utils/spinner'
@@ -13,6 +12,7 @@ const ChildUniversity = ({ dispatchTopics,storeTopics }) => {
     const [topics, setTopics] = useState([])
     const [skip, setSkip] = useState(0)
     const [hasMore, setHasMore] = useState(true)
+    const [error, setError] = useState(false)
 
     useEffect(() => {
         if(storeTopics.length > 0) {
@@ -39,6 +39,10 @@ const ChildUniversity = ({ dispatchTopics,storeTopics }) => {
             setSkip(skip +6)
             if(data.length === 0) {
                 setHasMore(false)
+                setError(true)
+            }
+            if(data.length === 0 && topics.length ===0 ) {
+                setError(true)
             }
         })
         .catch(e => {
@@ -70,7 +74,7 @@ const ChildUniversity = ({ dispatchTopics,storeTopics }) => {
                 hasMore={hasMore} >
                     {topics.length === 0 ? <></> : registerPanel}             
                     <div className={styles.cardsContainer} > 
-                        { topics.length !== 0 ? cards : <Spinner />} 
+                        { topics.length !== 0 ? cards : error? <h2 style={{textAlign: 'center', fontSize: '2rem', opacity:'0.7'}} >لا توجد مواضيع للعرض</h2> : <Spinner /> } 
                     </div>
             </InfiniteScroll>
     )

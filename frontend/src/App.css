@@ -6,10 +6,6 @@
   --secondary : #e39774;
   --backgroundC: #ebebeb;
   --primary-light: #76c8d342 ;
-
-  /* --primary: #2C394B ;
-  --secondary : #00afb9;
-  --backgroundC: #082032; */
   --white: #FFFFFF
 }
 
@@ -28,9 +24,6 @@ html {
 
 body {
   background: var(--backgroundC);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-
 }
 
 

@@ -6,7 +6,7 @@ export default function JobApplication({name,setName, studyField,  setStudyField
     <>
         <div className={styles.formGroup} >
             <input type="text" className={styles.textInput} name="name" value={name} onChange={e => {setName(e.target.value)}} />
-            <label className={styles.registerLabel} htmlFor="name">:اسم الخريج</label>
+            <label className={styles.registerLabel} htmlFor="name">:الاسم</label>
         </div>
         <div className={styles.formGroup} >
             <input type="text" className={styles.textInput} name="studyField" value={studyField} onChange={e => {setStudyField(e.target.value)}} />

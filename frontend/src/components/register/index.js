@@ -25,7 +25,7 @@ const Register = () => {
   const title = params.title
   let dom = (<></>)
 
-  if( title === 'بحث عن وظيفة' ) {
+  if( title === 'بحث عن فرصة' ) {
     payload = {
         applicantName: name,
         phoneNumber: phone,
@@ -47,7 +47,7 @@ const Register = () => {
             setSkills={setSkills} />)
     
 
-} else if( title === 'عرض وظيفة' ) {
+} else if( title === 'عرض فرصة' ) {
     payload = {
         applicantName: name,
         phoneNumber: phone,

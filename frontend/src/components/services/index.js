@@ -4,7 +4,6 @@ import styles from '../child-university/child-university.module.css'
 import { useEffect, useState,} from 'react'
 import { connect } from 'react-redux'
 import axios from 'axios'
-import imgProcessor from '../utils/imgProcessor'
 import { Link } from 'react-router-dom'
 import Spinner from '../utils/spinner'
 import InfiniteScroll from 'react-infinite-scroll-component'
@@ -14,6 +13,7 @@ const Services = ({ dispatchTopics, storeTopics }) => {
     const [topics, setTopics] = useState([])
     const [skip, setSkip] = useState(0)
     const [hasMore, setHasMore] = useState(true)
+    const [error, setError] = useState(false)
 
     useEffect(() => {
         if(storeTopics.length > 0) {
@@ -39,6 +39,9 @@ const Services = ({ dispatchTopics, storeTopics }) => {
             if(data.length === 0) {
                 setHasMore(false)
             }
+            if(data.length === 0 && topics.length ===0) {
+                setError(true)
+            }
         })
 
     }
@@ -58,7 +61,7 @@ const Services = ({ dispatchTopics, storeTopics }) => {
                 loader={topics.length === 0 ? <></> : <div style={{margin: '2rem auto', background: 'var(--primary)',width: '100%', display: 'flex', justifyContent: 'center', padding: '2rem'}} > <Spinner /> </div>}
                 hasMore={hasMore} >             
                     <div className={styles.cardsContainer} > 
-                        { topics.length !== 0 ? cards : <Spinner />} 
+                        { topics.length !== 0 ? cards : error ? <h2 style={{textAlign: 'center', fontSize: '2rem', opacity:'0.7'}} >لا توجد مواضيع للعرض</h2> : <Spinner />} 
                     </div>
             </InfiniteScroll>
     )

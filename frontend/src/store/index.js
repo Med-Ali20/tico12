@@ -5,6 +5,7 @@ const initialState = {
     servicesTopics: [],
     topic: '',
     token: localStorage.token || '',
+    isMusicPlayed: false
 }
 
 export const store = createStore((state = initialState, action) => {
@@ -34,6 +35,11 @@ export const store = createStore((state = initialState, action) => {
             return {
                 ...state,
                 topic: action.payload
+            }
+        case 'PLAY_MUSIC': 
+            return {
+                ...state,
+                isMusicPlayed: action.payload
             }
         default:
              return state

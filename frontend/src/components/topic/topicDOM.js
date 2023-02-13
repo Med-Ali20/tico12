@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './topic.module.css'
 import { Link,  useNavigate } from 'react-router-dom'
-import imgProcessor from '../utils/imgProcessor'
 import axios from 'axios'
 
 
