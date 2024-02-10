@@ -22,7 +22,7 @@ const Dashboard = ({ logout, token }) => {
     },[])
 
     const getApplicants = () => {
-        axios.get(`/Applicant/applicants?limit=10&skip=${skip}`)
+        axios.get(`https://tico.onrender.com/Applicant/applicants?limit=10&skip=${skip}`)
         .then(res => {
             const data = res.data
             setApplicants(applicants.concat(data))
@@ -41,7 +41,7 @@ const Dashboard = ({ logout, token }) => {
     }
 
     const deleteApplicant = (e, id) => {
-        axios.delete(`/Applicant/applicant/${id}`, {
+        axios.delete(`https://tico.onrender.com/Applicant/applicant/${id}`, {
             headers :{
                 Authorization: token
             },

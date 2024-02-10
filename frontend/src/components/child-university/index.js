@@ -31,7 +31,7 @@ const ChildUniversity = ({ dispatchTopics,storeTopics }) => {
 
     const getTopics = () => {
 
-        axios.get(`/Article/Articles/cu?limit=6&skip=${skip}`)
+        axios.get(`https://tico.onrender.com/Article/Articles/cu?limit=6&skip=${skip}`)
         .then(res => {
             const data = res.data
             setTopics(topics.concat(data))

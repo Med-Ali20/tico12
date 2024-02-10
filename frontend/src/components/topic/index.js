@@ -27,7 +27,7 @@ const Topic = ({ token, storeTopic, dispatchTopic }) => {
     const getTopic = () => {
         let abortController = new AbortController();  
 
-        axios.get(`/Article/Article/${id}`)
+        axios.get(`https://tico.onrender.com/Article/Article/${id}`)
         .then(res => {
             setTopic(res.data)
             dispatchTopic(res.data)

@@ -93,7 +93,7 @@ const Register = () => {
 
   const submitRegister = (e) => {
     e.preventDefault()
-    axios.post('/Applicant/ApplyForAService', payload)
+    axios.post('https://tico.onrender.com/Applicant/ApplyForAService', payload)
     .then(res => {
         navigate("/", { replace: true })
     })

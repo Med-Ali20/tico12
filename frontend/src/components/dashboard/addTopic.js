@@ -40,7 +40,7 @@ const AddTopic = ({ token }) => {
             fD.append('token', token)
             setBtnDisabled(true)
             setLoaderStyle({display: 'grid'})
-            axios.post('/Article/AddArticle', fD)
+            axios.post('https://tico.onrender.com/Article/AddArticle', fD)
             .then(res => {
                 setLoaderStyle({display: 'none'})
                 navigate("/", { replace: true })

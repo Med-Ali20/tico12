@@ -24,7 +24,7 @@ const Index = ( { token } ) => {
     } ,[])
 
     const getQuestions = () => {
-        axios.get(`/Questions/questions?limit=10&skip=${skip}`)
+        axios.get(`https://tico.onrender.com/Questions/questions?limit=10&skip=${skip}`)
         .then(res => {
             const data = res.data
             setQuestions(questions.concat(data))
@@ -38,7 +38,7 @@ const Index = ( { token } ) => {
 
     const submitQuestion = (e) => {
         e.preventDefault()
-        axios.post('/Questions/question', {
+        axios.post('https://tico.onrender.com/Questions/question', {
             question: questionInput
         })
         .then(res => {
@@ -49,7 +49,7 @@ const Index = ( { token } ) => {
 
     const submitAnswer = (e, id) => {
         e.preventDefault()
-        axios.put('/Questions/question', {
+        axios.put('https://tico.onrender.com/Questions/question', {
             answer: answerInput,
             id,
             token
@@ -61,7 +61,7 @@ const Index = ( { token } ) => {
 
     const deleteQuestion = (e, id) => {
         e.preventDefault()
-        axios.delete('/Questions/question', {
+        axios.delete('https://tico.onrender.com/Questions/question', {
             headers: {
                 Authorization: token
             },

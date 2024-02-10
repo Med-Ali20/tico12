@@ -20,13 +20,13 @@ const Admin = ({ setToken, token }) => {
 
     const adminLogin = (e) => {
       e.preventDefault()
-      axios.post('/Admin/sign-in', {
+      axios.post('https://tico.onrender.com/Admin/sign-in', {
         adminName: name,
         password
       }).then(res => {
         setToken(res.data.token)
         localStorage.setItem('token', res.data.token)
-        navigate('/dashboard', { replace: true })
+        navigate('https://tico.onrender.com/dashboard', { replace: true })
       }).catch(e => {
         setError('خطأ في تسجيل الدخول')
       })

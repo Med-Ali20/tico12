@@ -25,7 +25,7 @@ export default function TopicDOM( { topic, date, token } ) {
     },[])
 
     const deleteTopic = () => {
-        axios.delete(`/Article/Article`, {
+        axios.delete(`https://tico.onrender.com/Article/Article`, {
             headers: {
                 Authorization: token
             },
